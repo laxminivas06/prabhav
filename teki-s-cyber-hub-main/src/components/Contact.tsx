@@ -1,16 +1,42 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 
 const Contact = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const contacts = [
-    { icon: Mail, label: "Email", value: "tekiprabhavachary@gmail.com", href: "mailto:tekiprabhavachary@gmail.com" },
-    { icon: Phone, label: "Phone", value: "7981387458", href: "tel:7981387458" },
-    { icon: Linkedin, label: "LinkedIn", value: "Teki Prabhav Achary", href: "https://www.linkedin.com/in/teki-prabhav-achary-6a389b321" },
-    { icon: MapPin, label: "Location", value: "Balapur, Hyderabad, Telangana", href: null },
+    {
+      icon: Mail,
+      label: "Email",
+      value: "tekiprabhavachary@gmail.com",
+      href: "mailto:tekiprabhavachary@gmail.com",
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "7981387458",
+      href: "tel:7981387458",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "Teki Prabhav Achary",
+      href: "https://www.linkedin.com/in/teki-prabhav-achary-6a389b321",
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      value: "@mr_bobby_122",
+      href: "https://www.instagram.com/mr_bobby_122?igsh=MXZiaHd6MXVyenUweQ==",
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Balapur, Hyderabad, Telangana",
+      href: null,
+    },
   ];
 
   return (
@@ -42,18 +68,29 @@ const Contact = () => {
                   rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="cyber-card flex items-center gap-4 group"
                 >
-                  <c.icon className="text-primary shrink-0 group-hover:scale-110 transition-transform" size={22} />
+                  <c.icon
+                    className="text-primary shrink-0 group-hover:scale-110 transition-transform"
+                    size={22}
+                  />
                   <div>
-                    <p className="text-xs text-muted-foreground font-display">{c.label}</p>
-                    <p className="text-foreground text-sm font-medium">{c.value}</p>
+                    <p className="text-xs text-muted-foreground font-display">
+                      {c.label}
+                    </p>
+                    <p className="text-foreground text-sm font-medium">
+                      {c.value}
+                    </p>
                   </div>
                 </a>
               ) : (
                 <div className="cyber-card flex items-center gap-4">
                   <c.icon className="text-primary shrink-0" size={22} />
                   <div>
-                    <p className="text-xs text-muted-foreground font-display">{c.label}</p>
-                    <p className="text-foreground text-sm font-medium">{c.value}</p>
+                    <p className="text-xs text-muted-foreground font-display">
+                      {c.label}
+                    </p>
+                    <p className="text-foreground text-sm font-medium">
+                      {c.value}
+                    </p>
                   </div>
                 </div>
               )}
