@@ -43,7 +43,7 @@ const Hero = () => {
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border border-primary/30 flex items-center justify-center shadow-md">
             <img
               src="/images/snl.png"
-              alt="SmartAnalyt Innovation Logo"
+              alt="Smart N Innovation Logo"
               className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
             />
           </div>
@@ -90,7 +90,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.7 }}
           className="text-primary/80 text-sm sm:text-base font-display mb-8"
         >
-          SmartAnalyt Innovation
+          Smart N Innovation
         </motion.p>
 
         {/* QUOTE */}

@@ -43,12 +43,12 @@ const SmartLight = () => {
               <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                
                 <h3 className="font-display font-bold text-xl sm:text-2xl text-foreground">
-                  Smart & Light Innovations
+                  Smart N Light Innovations
                 </h3>
               </div>
 
               <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl mx-auto md:mx-0">
-                Proud Member of Smart & Light Innovations — contributing to innovation, technology, and ethical development through cutting-edge solutions and collaborative projects.
+                Proud Member of Smart N Light Innovations — contributing to innovation, technology, and ethical development through cutting-edge solutions and collaborative projects.
               </p>
 
               <a
