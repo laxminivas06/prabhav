@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 150 100% 90%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 150 100% 90%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 150 100% 90%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 222 47% 5%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 150 40% 80%;
+
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 180 100% 40%;
+    --accent-foreground: 222 47% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 150 60% 20%;
+    --input: 222 30% 14%;
+    --ring: 120 100% 50%;
+
+    --radius: 0.5rem;
+
+    --neon-glow: 0 0 10px hsl(120 100% 50% / 0.4), 0 0 40px hsl(120 100% 50% / 0.1);
+    --neon-glow-strong: 0 0 10px hsl(120 100% 50% / 0.6), 0 0 40px hsl(120 100% 50% / 0.2), 0 0 80px hsl(120 100% 50% / 0.1);
+    --card-glow: 0 0 1px hsl(120 100% 50% / 0.3), inset 0 0 20px hsl(120 100% 50% / 0.03);
+
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 150 100% 90%;
+    --sidebar-primary: 120 100% 50%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 150 100% 90%;
+    --sidebar-border: 150 60% 20%;
+    --sidebar-ring: 120 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .neon-text {
+    color: hsl(120 100% 50%);
+    text-shadow: var(--neon-glow);
+  }
+
+  .neon-border {
+    border-color: hsl(120 100% 50% / 0.3);
+    box-shadow: var(--card-glow);
+  }
+
+  .neon-border-hover:hover {
+    border-color: hsl(120 100% 50% / 0.6);
+    box-shadow: var(--neon-glow);
+  }
+
+  .cyber-card {
+    @apply bg-card border border-border rounded-lg p-6 neon-border transition-all duration-300;
+  }
+
+  .cyber-card:hover {
+    @apply neon-border-hover;
+    transform: translateY(-2px);
+  }
+
+  .terminal-text {
+    @apply font-display;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .glow-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(120 100% 50% / 0.5), transparent);
+  }
+
+  .progress-bar-bg {
+    background: hsl(222 30% 14%);
+  }
+
+  .progress-bar-fill {
+    background: linear-gradient(90deg, hsl(120 100% 50%), hsl(180 100% 40%));
+    box-shadow: 0 0 8px hsl(120 100% 50% / 0.4);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(222 47% 5%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(120 100% 50% / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(120 100% 50% / 0.5);
+}
