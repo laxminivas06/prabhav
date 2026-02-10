@@ -80,7 +80,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-2 font-display"
         >
-          Cybersecurity &nbsp;|&nbsp;Ethical Hacking
+          Cybersecurity &nbsp;|&nbsp; Ethical Hacking
         </motion.p>
 
         {/* ORGANIZATION (TEXT ONLY) */}
@@ -90,7 +90,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.7 }}
           className="text-primary/80 text-sm sm:text-base font-display mb-8"
         >
-          Smart N Innovation
+          Smart N Light Innovations
         </motion.p>
 
         {/* QUOTE */}
